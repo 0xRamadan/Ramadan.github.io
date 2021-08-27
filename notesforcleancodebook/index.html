@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noodp" />
+    <title class="pjax-title">NotesForCleanCodeBook - Mahmoud Abdallah Blog</title><meta name="Description" content=""><meta property="og:title" content="NotesForCleanCodeBook" />
+<meta property="og:description" content="Clean Code book   All my notes are going to be on my github account My Github Account
+ Chapter 01 Note of Chapter one
+Introduction 5:44 PM 11/23/2020 Name: mahmoud Abdallah Hassan
+ Clean Code Book Chapter 01 Clean Code  • code represents the details of the requirements.
+• specifying requirements in such detail that a machine can execute them is programming. Such a specification is code" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://Ramadan.github.io/notesforcleancodebook/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-08-26T18:27:35+02:00" />
+<meta property="article:modified_time" content="2021-08-26T18:27:35+02:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="NotesForCleanCodeBook"/>
+<meta name="twitter:description" content="Clean Code book   All my notes are going to be on my github account My Github Account
+ Chapter 01 Note of Chapter one
+Introduction 5:44 PM 11/23/2020 Name: mahmoud Abdallah Hassan
+ Clean Code Book Chapter 01 Clean Code  • code represents the details of the requirements.
+• specifying requirements in such detail that a machine can execute them is programming. Such a specification is code"/>
+<meta name="application-name" content="DoIt">
+<meta name="apple-mobile-web-app-title" content="DoIt">
+
+<meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/images/fav.ico"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" href="https://Ramadan.github.io/notesforcleancodebook/" /><link rel="prev" href="https://Ramadan.github.io/third_post/" /><link rel="next" href="https://Ramadan.github.io/notesforgrokkingalgorithms/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/fontawesome-free/all.min.css">
+    <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/animate/animate.min.css">
+    <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "NotesForCleanCodeBook",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/Ramadan.github.io\/notesforcleancodebook\/"
+        },"genre": "posts","wordcount":  1267 ,
+        "url": "https:\/\/Ramadan.github.io\/notesforcleancodebook\/","datePublished": "2021-08-26T18:27:35+02:00","dateModified": "2021-08-26T18:27:35+02:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Mahmoud Abdallah"
+            },"description": ""
+    }
+    </script></head>
+
+<body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">
+        function setTheme(theme) {document.body.setAttribute('theme', theme);}
+        function saveTheme(theme) {window.localStorage && localStorage.setItem('theme', theme);}
+        function getMeta(metaName) {const metas = document.getElementsByTagName('meta'); for (let i = 0; i < metas.length; i++) if (metas[i].getAttribute('name') === metaName) return metas[i]; return '';}
+        if (window.localStorage && localStorage.getItem('theme')) {let theme = localStorage.getItem('theme');theme === 'light' || theme === 'dark' || theme === 'black' ? setTheme(theme) : (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light')); } else { if ('' === 'light' || '' === 'dark' || '' === 'black') setTheme(''), saveTheme(''); else saveTheme('auto'), window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light');}
+        let themeColorMeta = getMeta('theme-color');
+        if (document.body.getAttribute('theme') != 'light') themeColorMeta.content = '#000000';
+    </script>
+    <div id="back-to-top"></div>
+    <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Mahmoud Abdallah Blog"><img
+        class="lazyload logo"
+        data-src="/images/avatar.webp"
+        data-srcset="/images/avatar.webp, /images/avatar.webp 1.5x, /images/avatar.webp 2x"
+        data-sizes="auto"
+        alt="/images/avatar.webp"
+        title="/images/avatar.webp"
+    />Mahmoud Abdallah&#39;s Blog</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/"> Home </a><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><a class="menu-item" href="/about/"> About </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="#" onclick="return false;" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="#" onclick="return false;" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="#" onclick="return false;" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Mahmoud Abdallah Blog"><img
+        class="lazyload logo"
+        data-src="/images/avatar.webp"
+        data-srcset="/images/avatar.webp, /images/avatar.webp 1.5x, /images/avatar.webp 2x"
+        data-sizes="auto"
+        alt="/images/avatar.webp"
+        title="/images/avatar.webp"
+    />Mahmoud Abdallah&#39;s Blog</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="#" onclick="return false;" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="#" onclick="return false;" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="#" onclick="return false;" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/" title="">Home</a><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a class="menu-item" href="/about/" title="">About</a><a href="#" onclick="return false;" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+            <div class="container"><div class="toc" id="toc-auto">
+        <h2 class="toc-title">Contents</h2>
+        <div class="toc-content always-active" id="toc-content-auto"></div>
+    </div><script>document.getElementsByTagName("main")[0].setAttribute("pageStyle", "normal")</script><script>document.getElementsByTagName("main")[0].setAttribute("autoTOC", "true")</script><article class="page single"><h1 class="single-title animate__animated animate__flipInX">NotesForCleanCodeBook</h1><div class="post-meta">
+            <div class="post-meta-line">
+                <span class="post-author"><i class="author fas fa-user-circle fa-fw"></i><a href="https://Ramadan.github.io/" title="Author" target="_blank" rel="noopener noreffer author" class="author">Mahmoud Abdallah</a>
+                </span>&nbsp;<span class="post-category">included in </span>&nbsp;<span class="post-category">categories <a href="/categories/all/"><i class="far fa-folder fa-fw"></i>All</a>&nbsp;<a href="/categories/professional/"><i class="far fa-folder fa-fw"></i>Professional</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-08-26">2021-08-26</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime="2021-08-26">2021-08-26</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;1267 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;6 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#chapter-01">Chapter 01</a>
+      <ul>
+        <li><a href="#introduction">Introduction</a></li>
+        <li><a href="#the-grand-redesign-in-the-sky">The Grand Redesign in the Sky</a></li>
+        <li><a href="#attitude">Attitude</a></li>
+        <li><a href="#the-art-of-clean-code">The Art of Clean Code</a></li>
+        <li><a href="#what-is-clean-code">What Is Clean Code</a>
+          <ul>
+            <li><a href="#bjarne-stroustrup-quote">Bjarne Stroustrup quote</a>
+              <ul>
+                <li><a href="#notes">notes</a></li>
+              </ul>
+            </li>
+            <li><a href="#grady-booch-quote">Grady Booch quote</a>
+              <ul>
+                <li><a href="#notes-1">notes</a></li>
+              </ul>
+            </li>
+            <li><a href="#dave-thomas-quote">Dave Thomas quote</a>
+              <ul>
+                <li><a href="#notes-2">notes</a></li>
+              </ul>
+            </li>
+            <li><a href="#michael-feathers-quote">Michael Feathers quote</a>
+              <ul>
+                <li><a href="#notes-3">notes</a></li>
+              </ul>
+            </li>
+            <li><a href="#ron-jeffries-quote">Ron Jeffries quote</a></li>
+            <li><a href="#notes-4">notes</a></li>
+          </ul>
+        </li>
+        <li><a href="#we-are-authors">We Are Authors</a></li>
+        <li><a href="#conclusion">Conclusion</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><figure><img src="/images/CleanCodePicture.jpg"
+         alt="a picture for clean code book"/><figcaption>
+            <h4>Clean Code book</h4>
+        </figcaption>
+</figure>
+
+<p><b>All my notes are going to be on my github account</b>
+<a href="https://github.com/RaymondReddigton" target="_blank">My Github Account</a></p>
+<div>
+<h2 id="chapter-01">Chapter 01</h2>
+<p>Note of Chapter one</p>
+<h3 id="introduction">Introduction</h3>
+<p>5:44 PM 11/23/2020
+Name: mahmoud Abdallah Hassan</p>
+<pre><code>            Clean Code Book
+                  Chapter 01
+                  Clean Code
+</code></pre>
+<p>• code represents the details of the
+requirements.</p>
+<p>• specifying requirements in such detail that a machine can execute them is
+programming. Such a specification is code</p>
+<p>• But we will never eliminate necessary precision—so there will always be code.</p>
+<p>• It was the bad code that brought the company down.</p>
+<p>• If you are a programmer of any experience then you’ve felt this impediment many times. Indeed, we have a name   for it. We call it wading. We</p>
+<p>• LeBlanc’s law: Later equals never.</p>
+<p>‎
+• No change is trivial.
+• Management does the only thing they can; they add more staff</p>
+<p>• (new staff): They don’t know the difference between a change that matches the design intent and a change that   thwarts the design intent</p>
+<h3 id="the-grand-redesign-in-the-sky">The Grand Redesign in the Sky</h3>
+<p>• The Grand Redesign in the Sky:
+Eventually Management bend to the demands of the developers and authorize the
+grand redesign in the sky.
+A new tiger team is selected.
+Now the two teams are in a race.
+Management will not replace the old system until the new system can do everything that the old system 		does.
+This race can go on for a very long time. (could take 10 years)
+the new system be redesigned because it’s such a mess.
+(moral): keeping your code clean is not just cost effective; it’s a matter of professional survival</p>
+<h3 id="attitude">Attitude</h3>
+<p>• Attitude:
+We are unprofessional.
+This may be a bitter pill to swallow.
+(as programmers): we should not be shy about telling them what we think.
+It’s your job to defend the code with equal passion.
+(moral): it is unprofessional for programmers to bend to the will of managers who don’t understand the 		risks of making messes.</p>
+<p>• The Primal Conundrum:
+True professionals know that the second part of the conundrum is wrong. You will not make the deadline 		by making the mess.
+The only way to make the deadline—the only way to go fast—is to keep the code as clean as possible at all 	times.</p>
+<h3 id="the-art-of-clean-code">The Art of Clean Code</h3>
+<p>• The Art of Clean Code?:
+The bad news is that writing clean code is a lot like painting a picture. Most of us know when a picture is 		painted well or badly. But being able to recognize good art from bad does not mean that we know how to 		paint. So too being able to recognize clean code from dirty code does not mean that we know how to write 	clean code!</p>
+<pre><code>Writing clean code requires the disciplined use of a myriad little techniques applied through a 			painstakingly acquired sense of “cleanliness.” This “code-sense” is the key. Some of us are born with it. 		Some of us have to fight to acquire it. Not only does it let us see whether code is good or bad, but it also 		shows us the strategy for applying our discipline to transform bad code into clean code.
+</code></pre>
+<h3 id="what-is-clean-code">What Is Clean Code</h3>
+<p>• What Is Clean Code?:</p>
+<h4 id="bjarne-stroustrup-quote">Bjarne Stroustrup quote</h4>
+<pre><code>Bjarne Stroustrup, inventor of C++
+and author of The C++ Programming
+Language.
+
+	&quot;like my code to be elegant and efficient. The
+	logic should be straightforward to make it hard
+	for bugs to hide, the dependencies minimal to
+	ease maintenance, error handling complete
+	according to an articulated strategy, and performance
+	close to optimal so as not to tempt
+	people to make the code messy with unprincipled
+	optimizations. Clean code does one thing
+	well.&quot;
+</code></pre>
+<h5 id="notes">notes</h5>
+<pre><code>notes: 
+	• “elegant.” pleasingly graceful and stylish in appearance or manner; pleasingly ingenious 				and simple.
+	• efficienc
+                 • “tempt.” Bad code tempts the mess to grow!
+        • One broken window starts the process toward decay.
+    • clean code does one thing well
+    • Bad code tries to do too much.
+</code></pre>
+<h4 id="grady-booch-quote">Grady Booch quote</h4>
+<pre><code>Grady Booch, author of Object
+Oriented Analysis and Design with
+Applications
+
+	&quot;Clean code is simple and direct. Clean code
+	reads like well-written prose. Clean code never
+	obscures the designer’s intent but rather is full
+	of crisp abstractions and straightforward lines
+	of control.&quot;
+</code></pre>
+<h5 id="notes-1">notes</h5>
+<pre><code>notes:
+	• a readability perspective
+	• It should contain only what is necessary.
+</code></pre>
+<h4 id="dave-thomas-quote">Dave Thomas quote</h4>
+<pre><code>“Big” Dave Thomas, founder
+of OTI, godfather of the
+Eclipse strategy
+
+	&quot;Clean code can be read, and enhanced by a
+	developer other than its original author. It has
+	unit and acceptance tests. It has meaningful
+	names. It provides one way rather than many
+	ways for doing one thing. It has minimal dependencies,
+	which are explicitly defined, and provides
+	a clear and minimal API. Code should be
+	literate since depending on the language, not all
+	necessary information can be expressed clearly
+	in code alone.&quot;
+</code></pre>
+<h5 id="notes-2">notes</h5>
+<pre><code>notes:
+	• clean code makes it easy for other people to enhance it.
+	• Code without tests, is not clean.
+	• Smaller is better.
+	• literate: the code should be composed in such a form as to make it readable by humans.
+</code></pre>
+<h4 id="michael-feathers-quote">Michael Feathers quote</h4>
+<pre><code>Michael Feathers, author of Working
+Effectively with Legacy Code
+	
+
+	&quot;I could list all of the qualities that I notice in
+	clean code, but there is one overarching quality
+	that leads to all of them. Clean code always
+	looks like it was written by someone who cares.
+	There is nothing obvious that you can do to
+	make it better. All of those things were thought
+	about by the code’s author, and if you try to
+	imagine improvements, you’re led back to
+	where you are, sitting in appreciation of the
+	code someone left for you—code left by someone
+	who cares deeply about the craft.&quot;
+</code></pre>
+<h5 id="notes-3">notes</h5>
+<pre><code>notes:
+	• paid appropriate attention to details.
+</code></pre>
+<h4 id="ron-jeffries-quote">Ron Jeffries quote</h4>
+<pre><code>Ron Jeffries, author of Extreme Programming
+Installed and Extreme Programming
+Adventures in C#.
+
+	&quot;In recent years I begin, and nearly end, with Beck’s
+	rules of simple code. In priority order, simple code:
+	• Runs all the tests;
+	• Contains no duplication;
+	• Expresses all the design ideas that are in the system;
+	• Minimizes the number of entities such as classes, methods, functions, and the like.&quot;
+</code></pre>
+<h4 id="notes-4">notes</h4>
+<pre><code>notes:
+	• duplication: it’s a sign that there is an idea in our mind that is not well represented in the code.
+      didn't understand that 
+
+	&quot;however. I also look at whether an object or method is doing more than one thing. If it’s an 			object, it probably needs to be broken into two or more objects. If it’s a method, I will always 			use the Extract Method refactoring on it, resulting in one method that says more clearly what it 			does, and some submethods saying how it is done.&quot;
+
+
+	• all programs are made up of very similar elements.
+	• Reduced duplication, high expressiveness, and early building of simple abstractions.
+</code></pre>
+<h3 id="we-are-authors">We Are Authors</h3>
+<p>• We Are Authors:
+• The next time you write a line of code, remember you are an author,
+writing for readers who will judge your effort.
+• there’s no way to write code without reading it, so making it
+easy to read actually makes it easier to write.</p>
+<h3 id="conclusion">Conclusion</h3>
+<p>• Conclusion:
+Books on art don’t promise to make you an artist. All they can do is give you some of the
+tools, techniques, and thought processes that other artists have used. So too this book cannot
+promise to make you a good programmer. It cannot promise to give you “code-sense.”
+All it can do is show you the thought processes of good programmers and the tricks, techniques,
+and tools that they use.</p>
+</div></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2021-08-26</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/notesforcleancodebook/index.md" target="_blank" rel="noopener noreferrer">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="#" onclick="return false;" title="Share on Twitter" data-sharer="twitter" data-url="https://Ramadan.github.io/notesforcleancodebook/" data-title="NotesForCleanCodeBook" data-via="M_A_H_Ramadan"><i class="fab fa-twitter fa-fw"></i></a><a href="#" onclick="return false;" title="Share on Facebook" data-sharer="facebook" data-url="https://Ramadan.github.io/notesforcleancodebook/"><i class="fab fa-facebook-square fa-fw"></i></a><a href="#" onclick="return false;" title="Share on WhatsApp" data-sharer="whatsapp" data-url="https://Ramadan.github.io/notesforcleancodebook/" data-title="NotesForCleanCodeBook" data-web><i class="fab fa-whatsapp fa-fw"></i></a><a href="#" onclick="return false;" title="Share on Line" data-sharer="line" data-url="https://Ramadan.github.io/notesforcleancodebook/" data-title="NotesForCleanCodeBook"><i data-svg-src="/lib/simple-icons/icons/line.min.svg"></i></a><a href="#" onclick="return false;" title="Share on 微博" data-sharer="weibo" data-url="https://Ramadan.github.io/notesforcleancodebook/" data-title="NotesForCleanCodeBook"><i class="fab fa-weibo fa-fw"></i></a><a href="#" onclick="return false;" title="Share on Myspace" data-sharer="myspace" data-url="https://Ramadan.github.io/notesforcleancodebook/" data-title="NotesForCleanCodeBook" data-description=""><i data-svg-src="/lib/simple-icons/icons/myspace.min.svg"></i></a><a href="#" onclick="return false;" title="Share on Blogger" data-sharer="blogger" data-url="https://Ramadan.github.io/notesforcleancodebook/" data-title="NotesForCleanCodeBook" data-description=""><i class="fab fa-blogger fa-fw"></i></a><a href="#" onclick="return false;" title="Share on Evernote" data-sharer="evernote" data-url="https://Ramadan.github.io/notesforcleancodebook/" data-title="NotesForCleanCodeBook"><i class="fab fa-evernote fa-fw"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"></section>
+        <section>
+            <span><a href="#" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/third_post/" class="prev" rel="prev" title="this is the Third_post"><i class="fas fa-angle-left fa-fw"></i>this is the Third_post</a>
+            <a href="/notesforgrokkingalgorithms/" class="next" rel="next" title="NotesForGrokkingAlgorithms">NotesForGrokkingAlgorithms<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div id="comments"></div></article></div>
+        </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2021</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://Ramadan.github.io/" target="_blank" rel="noopener noreferrer">Mahmoud Abdallah</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://Ramadan.github.io/" target="_blank">Mahmoud Abdallah Blog</a></span></div>
+        </div></footer></div>
+
+    <div id="fixed-buttons"><a href="#back-to-top" id="back-to-top-button" class="fixed-button" title="Back to Top">
+            <i class="fas fa-arrow-up fa-fw"></i>
+        </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+            <i class="fas fa-comment fa-fw"></i>
+        </a>
+    </div><div class="assets"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/fuse/fuse.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript" src="/lib/topbar/topbar.min.js"></script><script type="text/javascript" src="/lib/pjax/pjax.min.js"></script><script type="text/javascript" src="/js/theme.min.js"></script></div>
+
+<div class="pjax-assets"><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"comment":{},"cookieconsent":{"content":{"dismiss":"Got it!","link":"Learn more","message":"This website uses Cookies to improve your experience."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"distance":100,"findAllMatches":false,"fuseIndexURL":"/index.json","highlightTag":"em","ignoreFieldNorm":false,"ignoreLocation":false,"isCaseSensitive":false,"location":0,"maxResultLength":10,"minMatchCharLength":2,"noResultsFound":"No results found","snippetLength":30,"threshold":0.3,"type":"fuse","useExtendedSearch":false},"sharerjs":true};</script><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"></div>
+</body>
+
+</html>
