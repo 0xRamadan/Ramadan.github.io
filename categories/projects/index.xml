@@ -1,0 +1,19 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Projects - Category - Mahmoud Abdallah Blog</title>
+        <link>https://Ramadan.github.io/categories/projects/</link>
+        <description>Projects - Category - Mahmoud Abdallah Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>mah64725@gmail.com (Mahmoud Abdallah)</managingEditor>
+            <webMaster>mah64725@gmail.com (Mahmoud Abdallah)</webMaster><lastBuildDate>Thu, 26 Aug 2021 00:27:01 &#43;0200</lastBuildDate><atom:link href="https://Ramadan.github.io/categories/projects/" rel="self" type="application/rss+xml" /><item>
+    <title>this is the second post</title>
+    <link>https://Ramadan.github.io/second_post/</link>
+    <pubDate>Thu, 26 Aug 2021 00:27:01 &#43;0200</pubDate><author>
+        <name>Mahmoud Abdallah</name>
+    </author><guid>https://Ramadan.github.io/second_post/</guid>
+    <description><![CDATA[learn how to add an image or figure in a post.
+ Programming is fun   The images should be put in the &lsquo;static&rsquo; folder.
+learing how to highlight:
+1 2 3 4 5  # declaring two variables and printing the sum of the two. x = 1 y = 2 print(x + y)   just exploring what gist is:
+Gist is one of the many features GitHub provides to its users.]]></description>
+</item></channel>
+</rss>

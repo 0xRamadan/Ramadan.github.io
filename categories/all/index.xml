@@ -1,0 +1,59 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>All - Category - Mahmoud Abdallah Blog</title>
+        <link>https://Ramadan.github.io/categories/all/</link>
+        <description>All - Category - Mahmoud Abdallah Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>mah64725@gmail.com (Mahmoud Abdallah)</managingEditor>
+            <webMaster>mah64725@gmail.com (Mahmoud Abdallah)</webMaster><lastBuildDate>Fri, 27 Aug 2021 01:18:55 &#43;0200</lastBuildDate><atom:link href="https://Ramadan.github.io/categories/all/" rel="self" type="application/rss+xml" /><item>
+    <title>NotesForGrokkingAlgorithms</title>
+    <link>https://Ramadan.github.io/notesforgrokkingalgorithms/</link>
+    <pubDate>Fri, 27 Aug 2021 01:18:55 &#43;0200</pubDate><author>
+        <name>Mahmoud Abdallah</name>
+    </author><guid>https://Ramadan.github.io/notesforgrokkingalgorithms/</guid>
+    <description><![CDATA[Grokking Algorithms   All my notes are going to be on my github account My Github Account
+ Chapter 01 Introduction to algorithms Chapter 01: Introduction to algorithms
+Some common Big O run times sorted from fastest to slowest:
+• O(log n), also known as log time. Example: Binary search.
+• O(n), also known as linear time. Example: Simple search.
+• O(n * log n). Example: A fast sorting algorithm, like quicksort.]]></description>
+</item><item>
+    <title>NotesForCleanCodeBook</title>
+    <link>https://Ramadan.github.io/notesforcleancodebook/</link>
+    <pubDate>Thu, 26 Aug 2021 18:27:35 &#43;0200</pubDate><author>
+        <name>Mahmoud Abdallah</name>
+    </author><guid>https://Ramadan.github.io/notesforcleancodebook/</guid>
+    <description><![CDATA[Clean Code book   All my notes are going to be on my github account My Github Account
+ Chapter 01 Note of Chapter one
+Introduction 5:44 PM 11/23/2020 Name: mahmoud Abdallah Hassan
+ Clean Code Book Chapter 01 Clean Code  • code represents the details of the requirements.
+• specifying requirements in such detail that a machine can execute them is programming. Such a specification is code]]></description>
+</item><item>
+    <title>this is the Third_post</title>
+    <link>https://Ramadan.github.io/third_post/</link>
+    <pubDate>Thu, 26 Aug 2021 14:14:08 &#43;0200</pubDate><author>
+        <name>Mahmoud Abdallah</name>
+    </author><guid>https://Ramadan.github.io/third_post/</guid>
+    <description><![CDATA[this is just some content learing how to highlight:
+1 2 3 4  # declaring two variables and printing the sum of the two. x = 1 y = 2 print(x + y)   ]]></description>
+</item><item>
+    <title>this is the first post</title>
+    <link>https://Ramadan.github.io/first_post/</link>
+    <pubDate>Thu, 26 Aug 2021 00:27:24 &#43;0200</pubDate><author>
+        <name>Mahmoud Abdallah</name>
+    </author><guid>https://Ramadan.github.io/first_post/</guid>
+    <description><![CDATA[this is some content to test
+1 2 3 4  public static void Main(){ Console.WriteLine(&#34;Hello World from firt post!&#34;); }   this is some content to test
+1  print(&#34;Hello world!!&#34;)   ]]></description>
+</item><item>
+    <title>this is the second post</title>
+    <link>https://Ramadan.github.io/second_post/</link>
+    <pubDate>Thu, 26 Aug 2021 00:27:01 &#43;0200</pubDate><author>
+        <name>Mahmoud Abdallah</name>
+    </author><guid>https://Ramadan.github.io/second_post/</guid>
+    <description><![CDATA[learn how to add an image or figure in a post.
+ Programming is fun   The images should be put in the &lsquo;static&rsquo; folder.
+learing how to highlight:
+1 2 3 4 5  # declaring two variables and printing the sum of the two. x = 1 y = 2 print(x + y)   just exploring what gist is:
+Gist is one of the many features GitHub provides to its users.]]></description>
+</item></channel>
+</rss>

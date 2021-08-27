@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noodp" />
+    <title class="pjax-title">NotesForGrokkingAlgorithms - Mahmoud Abdallah Blog</title><meta name="Description" content=""><meta property="og:title" content="NotesForGrokkingAlgorithms" />
+<meta property="og:description" content="Grokking Algorithms   All my notes are going to be on my github account My Github Account
+ Chapter 01 Introduction to algorithms Chapter 01: Introduction to algorithms
+Some common Big O run times sorted from fastest to slowest:
+• O(log n), also known as log time. Example: Binary search.
+• O(n), also known as linear time. Example: Simple search.
+• O(n * log n). Example: A fast sorting algorithm, like quicksort." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://Ramadan.github.io/notesforgrokkingalgorithms/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-08-27T01:18:55+02:00" />
+<meta property="article:modified_time" content="2021-08-27T01:18:55+02:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="NotesForGrokkingAlgorithms"/>
+<meta name="twitter:description" content="Grokking Algorithms   All my notes are going to be on my github account My Github Account
+ Chapter 01 Introduction to algorithms Chapter 01: Introduction to algorithms
+Some common Big O run times sorted from fastest to slowest:
+• O(log n), also known as log time. Example: Binary search.
+• O(n), also known as linear time. Example: Simple search.
+• O(n * log n). Example: A fast sorting algorithm, like quicksort."/>
+<meta name="application-name" content="DoIt">
+<meta name="apple-mobile-web-app-title" content="DoIt">
+
+<meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/images/fav.ico"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" href="https://Ramadan.github.io/notesforgrokkingalgorithms/" /><link rel="prev" href="https://Ramadan.github.io/notesforcleancodebook/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/fontawesome-free/all.min.css">
+    <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/animate/animate.min.css">
+    <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "NotesForGrokkingAlgorithms",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/Ramadan.github.io\/notesforgrokkingalgorithms\/"
+        },"genre": "posts","wordcount":  783 ,
+        "url": "https:\/\/Ramadan.github.io\/notesforgrokkingalgorithms\/","datePublished": "2021-08-27T01:18:55+02:00","dateModified": "2021-08-27T01:18:55+02:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Mahmoud Abdallah"
+            },"description": ""
+    }
+    </script></head>
+
+<body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">
+        function setTheme(theme) {document.body.setAttribute('theme', theme);}
+        function saveTheme(theme) {window.localStorage && localStorage.setItem('theme', theme);}
+        function getMeta(metaName) {const metas = document.getElementsByTagName('meta'); for (let i = 0; i < metas.length; i++) if (metas[i].getAttribute('name') === metaName) return metas[i]; return '';}
+        if (window.localStorage && localStorage.getItem('theme')) {let theme = localStorage.getItem('theme');theme === 'light' || theme === 'dark' || theme === 'black' ? setTheme(theme) : (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light')); } else { if ('' === 'light' || '' === 'dark' || '' === 'black') setTheme(''), saveTheme(''); else saveTheme('auto'), window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light');}
+        let themeColorMeta = getMeta('theme-color');
+        if (document.body.getAttribute('theme') != 'light') themeColorMeta.content = '#000000';
+    </script>
+    <div id="back-to-top"></div>
+    <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Mahmoud Abdallah Blog"><img
+        class="lazyload logo"
+        data-src="/images/avatar.webp"
+        data-srcset="/images/avatar.webp, /images/avatar.webp 1.5x, /images/avatar.webp 2x"
+        data-sizes="auto"
+        alt="/images/avatar.webp"
+        title="/images/avatar.webp"
+    />Mahmoud Abdallah&#39;s Blog</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/"> Home </a><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><a class="menu-item" href="/about/"> About </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="#" onclick="return false;" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="#" onclick="return false;" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="#" onclick="return false;" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Mahmoud Abdallah Blog"><img
+        class="lazyload logo"
+        data-src="/images/avatar.webp"
+        data-srcset="/images/avatar.webp, /images/avatar.webp 1.5x, /images/avatar.webp 2x"
+        data-sizes="auto"
+        alt="/images/avatar.webp"
+        title="/images/avatar.webp"
+    />Mahmoud Abdallah&#39;s Blog</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="#" onclick="return false;" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="#" onclick="return false;" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="#" onclick="return false;" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/" title="">Home</a><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a class="menu-item" href="/about/" title="">About</a><a href="#" onclick="return false;" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+            <div class="container"><div class="toc" id="toc-auto">
+        <h2 class="toc-title">Contents</h2>
+        <div class="toc-content always-active" id="toc-content-auto"></div>
+    </div><script>document.getElementsByTagName("main")[0].setAttribute("pageStyle", "normal")</script><script>document.getElementsByTagName("main")[0].setAttribute("autoTOC", "true")</script><article class="page single"><h1 class="single-title animate__animated animate__flipInX">NotesForGrokkingAlgorithms</h1><div class="post-meta">
+            <div class="post-meta-line">
+                <span class="post-author"><i class="author fas fa-user-circle fa-fw"></i><a href="https://Ramadan.github.io/" title="Author" target="_blank" rel="noopener noreffer author" class="author">Mahmoud Abdallah</a>
+                </span>&nbsp;<span class="post-category">included in </span>&nbsp;<span class="post-category">categories <a href="/categories/all/"><i class="far fa-folder fa-fw"></i>All</a>&nbsp;<a href="/categories/professional/"><i class="far fa-folder fa-fw"></i>Professional</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-08-27">2021-08-27</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime="2021-08-27">2021-08-27</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;783 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;4 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#chapter-01">Chapter 01</a>
+      <ul>
+        <li><a href="#introduction-to-algorithms">Introduction to algorithms</a></li>
+        <li><a href="#recap">Recap</a></li>
+      </ul>
+    </li>
+    <li><a href="#chapter-02">Chapter 02</a>
+      <ul>
+        <li><a href="#selection-sort">Selection Sort</a></li>
+        <li><a href="#recap-1">Recap</a></li>
+      </ul>
+    </li>
+    <li><a href="#chapter-03">Chapter 03</a>
+      <ul>
+        <li><a href="#recursion">Recursion</a></li>
+        <li><a href="#recap-2">Recap</a></li>
+      </ul>
+    </li>
+    <li><a href="#chapter-04">Chapter 04</a>
+      <ul>
+        <li><a href="#quicksort">Quicksort</a></li>
+        <li><a href="#recap-3">Recap</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p><figure><img src="/images/GrokkingAlgorithmsNotes-small.jpg"
+         alt="an image contain Grokking Algorithms Book and some code lines on a screen in the background"/><figcaption>
+            <h4>Grokking Algorithms</h4>
+        </figcaption>
+</figure>
+
+<b>All my notes are going to be on my github account</b>
+<a href="https://github.com/RaymondReddigton" target="_blank">My Github Account</a></p>
+<div>
+<h2 id="chapter-01">Chapter 01</h2>
+<h3 id="introduction-to-algorithms">Introduction to algorithms</h3>
+<p>Chapter 01: Introduction to algorithms</p>
+<p>Some common Big O run times sorted from fastest to slowest:</p>
+<p>• O(log n), also known as log time. Example: Binary search.</p>
+<p>• O(n), also known as linear time. Example: Simple search.</p>
+<p>• O(n * log n). Example: A fast sorting algorithm, like quicksort.</p>
+<p>• O(n2). Example: A slow sorting algorithm, like selection sort.</p>
+<p>• O(n!). Example: A really slow algorithm, like the traveling Salesperson.</p>
+<h3 id="recap">Recap</h3>
+<p>Recap</p>
+<p>• Binary search is a lot faster than simple search.</p>
+<p>• O(log n) is faster than O(n), but it gets a lot faster once the list of items you’re searching through grows.</p>
+<p>• Algorithm speed isn’t measured in seconds.</p>
+<p>• Algorithm times are measured in terms of growth of an algorithm.</p>
+<p>• Algorithm times are written in Big O notation.</p>
+<h2 id="chapter-02">Chapter 02</h2>
+<h3 id="selection-sort">Selection Sort</h3>
+<p>Chapter 02: Selection Sort</p>
+<p>•	Linked lists are great if you’re going to read all the items one at a time.</p>
+<p>•	Arrays are great if you want to read random elements.</p>
+<p>•	Lists are better if you want to insert elements into the middle.</p>
+<p>•	A lot of use cases require random access, so arrays are used a lot. Arrays and lists are used to implement other data structures.</p>
+<p>•	Selection sort is a neat algorithm, but it’s not very fast. Quicksort is a faster sorting algorithm that only takes O(n log n) time.</p>
+<h3 id="recap-1">Recap</h3>
+<p>Recap:</p>
+<p>• When you want to store multiple elements, use an array or a list.</p>
+<p>• With an array, all your elements are stored right next to each other.</p>
+<p>• With a list, elements are strewn all over, and one element stores the address of the next one.</p>
+<p>• Arrays allow fast reads.</p>
+<p>• Linked lists allow fast inserts and deletes.</p>
+<p>• All elements in the array should be the same type (all ints, all doubles, and so on).</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-Python" data-lang="Python">    <span class="c1"># A simple Selection sort Algorithm </span>
+<span class="k">def</span> <span class="nf">findSmallest</span><span class="p">(</span><span class="n">arr</span><span class="p">):</span>
+    <span class="n">smallest</span> <span class="o">=</span> <span class="n">arr</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">smallest_index</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">arr</span><span class="p">)):</span>
+        <span class="k">if</span> <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">smallest</span><span class="p">:</span>
+            <span class="n">smallest</span> <span class="o">=</span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+            <span class="n">smallest_index</span> <span class="o">=</span> <span class="n">i</span>
+    <span class="k">return</span> <span class="n">smallest_index</span>
+
+<span class="k">def</span> <span class="nf">selectionSort</span><span class="p">(</span><span class="n">arr</span><span class="p">):</span>
+    <span class="n">new_arr</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">arr</span><span class="p">)):</span>
+        <span class="n">smallest</span> <span class="o">=</span> <span class="n">findSmallest</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>
+        <span class="n">new_arr</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">arr</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">smallest</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">new_arr</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">arr</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="nb">input</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">()))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">selectionSort</span><span class="p">(</span><span class="n">arr</span><span class="p">))</span>
+
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="chapter-03">Chapter 03</h2>
+<h3 id="recursion">Recursion</h3>
+<p>Chapter 03:  Recursion</p>
+<ul>
+<li>
+<p>Pseudocode is a high-level description of the problem you’re trying to solve, in code. It’s written like code, but it’s meant to be closer to human speech.</p>
+</li>
+<li>
+<p>Recursion is where a function calls itself.</p>
+</li>
+<li>
+<p>Quote by Leigh Caldwell on Stack Overflow:  “Loops may achieve a performance gain for your program. Recursion may achieve a performance gain for your programmer. Choose which is more important in your situation!”</p>
+</li>
+<li>
+<p>every recursive function has two parts: the base case, and the recursive case.</p>
+</li>
+</ul>
+<figure><img src="/images/Picture1.png"
+         alt="a function in python handling base case and the recursive case"/>
+</figure>
+
+<ul>
+<li>Using the stack is convenient because you don’t have to keep track of a pile of boxes yourself—the stack does it for you. but there’s a cost: saving all that info can take up a lot of memory.</li>
+</ul>
+<h3 id="recap-2">Recap</h3>
+<p>Recap</p>
+<p>• Recursion is when a function calls itself.</p>
+<p>• Every recursive function has two cases: the base case and the recursive case.</p>
+<p>• A stack has two operations: push and pop.</p>
+<p>• All function calls go onto the call stack.</p>
+<p>• The call stack can get very large, which takes up a lot of memory.</p>
+<h2 id="chapter-04">Chapter 04</h2>
+<h3 id="quicksort">Quicksort</h3>
+<p>Chapter 04:  Quicksort</p>
+<p>•	Quicksort is a sorting algorithm, and a much faster one than selection sort.</p>
+<p>•	To solve a problem using D&amp;C, there are two steps:</p>
+<pre><code>1. Figure out the base case. This should be the simplest possible case.
+
+2. Divide or decrease your problem until it becomes the base case.
+</code></pre>
+<p>•	Remember, recursion keeps track of the state.</p>
+<p>•	When you’re writing a recursive function involving an array, the base case is often an empty array or an array with one element. If you’re stuck, try that first.</p>
+<h3 id="recap-3">Recap</h3>
+<p>Recap:</p>
+<p>•	D&amp;C works by breaking a problem down into smaller and smaller pieces. If you’re using D&amp;C on a list, the base case is probably an empty array or an array with one element.</p>
+<p>•	If you’re implementing quicksort, choose a random element as the pivot. The average runtime of quicksort is O(n log n)!</p>
+<p>•	 The constant in Big O notation can matter sometimes. That’s why quicksort is faster than merge sort.</p>
+<p>•	The constant almost never matters for simple search versus binary search, because O(log n) is so much faster than O(n) when your list gets big.</p>
+</div>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2021-08-27</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/notesforgrokkingalgorithms/index.md" target="_blank" rel="noopener noreferrer">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="#" onclick="return false;" title="Share on Twitter" data-sharer="twitter" data-url="https://Ramadan.github.io/notesforgrokkingalgorithms/" data-title="NotesForGrokkingAlgorithms" data-via="M_A_H_Ramadan"><i class="fab fa-twitter fa-fw"></i></a><a href="#" onclick="return false;" title="Share on Facebook" data-sharer="facebook" data-url="https://Ramadan.github.io/notesforgrokkingalgorithms/"><i class="fab fa-facebook-square fa-fw"></i></a><a href="#" onclick="return false;" title="Share on WhatsApp" data-sharer="whatsapp" data-url="https://Ramadan.github.io/notesforgrokkingalgorithms/" data-title="NotesForGrokkingAlgorithms" data-web><i class="fab fa-whatsapp fa-fw"></i></a><a href="#" onclick="return false;" title="Share on Line" data-sharer="line" data-url="https://Ramadan.github.io/notesforgrokkingalgorithms/" data-title="NotesForGrokkingAlgorithms"><i data-svg-src="/lib/simple-icons/icons/line.min.svg"></i></a><a href="#" onclick="return false;" title="Share on 微博" data-sharer="weibo" data-url="https://Ramadan.github.io/notesforgrokkingalgorithms/" data-title="NotesForGrokkingAlgorithms"><i class="fab fa-weibo fa-fw"></i></a><a href="#" onclick="return false;" title="Share on Myspace" data-sharer="myspace" data-url="https://Ramadan.github.io/notesforgrokkingalgorithms/" data-title="NotesForGrokkingAlgorithms" data-description=""><i data-svg-src="/lib/simple-icons/icons/myspace.min.svg"></i></a><a href="#" onclick="return false;" title="Share on Blogger" data-sharer="blogger" data-url="https://Ramadan.github.io/notesforgrokkingalgorithms/" data-title="NotesForGrokkingAlgorithms" data-description=""><i class="fab fa-blogger fa-fw"></i></a><a href="#" onclick="return false;" title="Share on Evernote" data-sharer="evernote" data-url="https://Ramadan.github.io/notesforgrokkingalgorithms/" data-title="NotesForGrokkingAlgorithms"><i class="fab fa-evernote fa-fw"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"></section>
+        <section>
+            <span><a href="#" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/notesforcleancodebook/" class="prev" rel="prev" title="NotesForCleanCodeBook"><i class="fas fa-angle-left fa-fw"></i>NotesForCleanCodeBook</a></div>
+</div>
+<div id="comments"></div></article></div>
+        </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2021</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://Ramadan.github.io/" target="_blank" rel="noopener noreferrer">Mahmoud Abdallah</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://Ramadan.github.io/" target="_blank">Mahmoud Abdallah Blog</a></span></div>
+        </div></footer></div>
+
+    <div id="fixed-buttons"><a href="#back-to-top" id="back-to-top-button" class="fixed-button" title="Back to Top">
+            <i class="fas fa-arrow-up fa-fw"></i>
+        </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+            <i class="fas fa-comment fa-fw"></i>
+        </a>
+    </div><div class="assets"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/fuse/fuse.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript" src="/lib/topbar/topbar.min.js"></script><script type="text/javascript" src="/lib/pjax/pjax.min.js"></script><script type="text/javascript" src="/js/theme.min.js"></script></div>
+
+<div class="pjax-assets"><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"comment":{},"cookieconsent":{"content":{"dismiss":"Got it!","link":"Learn more","message":"This website uses Cookies to improve your experience."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"distance":100,"findAllMatches":false,"fuseIndexURL":"/index.json","highlightTag":"em","ignoreFieldNorm":false,"ignoreLocation":false,"isCaseSensitive":false,"location":0,"maxResultLength":10,"minMatchCharLength":2,"noResultsFound":"No results found","snippetLength":30,"threshold":0.3,"type":"fuse","useExtendedSearch":false},"sharerjs":true};</script><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"></div>
+</body>
+
+</html>
