@@ -1,7 +1,7 @@
 # NotesForCleanCodeBook
 
 {{< admonition type=note title="Note" open=true >}}
-<b>All my notes are going to be on my github account</b>
+<b>All my notes are going to be on</b>
 <a href="https://github.com/RaymondReddigton" target="_blank">My Github Account</a>
 {{< /admonition >}}
 

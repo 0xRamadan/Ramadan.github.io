@@ -76,6 +76,15 @@ Currently I'm in the last year of college, I study <b>Computer Engingeering</b> 
 </div>
 <p>----------------------</p>
 <div>
+    <p><b>•	Python Core</b></p>
+    <div style="padding-left:20px">
+        <p>Issued Sep 2020</p>
+        <a href="https://www.sololearn.com/" target="_blank">soloearn</a><br>
+        <a href="https://www.sololearn.com/certificates/course/en/17508592/1073/landscape/png" target="_blank">See Credential</a>
+    </div>
+</div>
+<p>----------------------</p>
+<div>
     <p><b>•	HCIA AI</b></p>
     <div style="padding-left:20px">
         <p>Issued Des 2020. Expires Dec 2023</p>
